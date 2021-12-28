@@ -1,0 +1,7 @@
+Bush	male.n.02	shrub.n.01
+is	be.v.02	be.v.01
+not	O	not.r.01
+Bin~Laden	male.n.02	0
+'s	O	0
+friend	friend.n.01	friend.n.01
+.	O	0
