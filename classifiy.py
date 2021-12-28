@@ -19,14 +19,14 @@ def write2csv(Ids, sentence):
     with open('Data/sentences.txt', 'w') as f:
         f.write(output)
 
-def write2Json(doc_dict):
-    with open('Data/result.json', 'w') as fp:
+def write2Json(doc_dict, path):
+    with open(path, 'w') as fp:
         json.dump(doc_dict, fp)
 
 def main():
     Ids, sentence, doc_dict = utils.read_data("Data/train.txt")
-    write2Json(getSenseBasline(doc_dict))
-    write2csv(Ids, sentence)
+    write2Json(getSenseBasline(doc_dict),'Data/tokens.json')
+    write2Json({Ids[i]: sentence[i] for i in range(len(Ids))}, 'Data/sentences.json')
 if __name__ == "__main__":
     main()
     

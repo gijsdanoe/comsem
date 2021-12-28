@@ -27,3 +27,8 @@ def read_data(file):
 
     return docIds, sentences, token_dict
 
+def read_files(token_file, sentence_file):
+    token_dict = json.load(open(token_file))
+    sentence_dict = json.load(open(sentence_file))
+    return token_dict, sentence_dict
+    
