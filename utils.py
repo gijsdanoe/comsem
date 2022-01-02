@@ -13,19 +13,21 @@ def read_data(file):
             if "# newdoc id = " in line:
                 docId = line.replace("# newdoc id = ","").replace("\n","")
                 docIds.append(docId)
+
             elif "# raw sent = " in line:
                 sentences.append(line.replace("# raw sent = ",""))
+
                 if token_dict_temp:
                     token_dict[docIds_prev] = token_dict_temp
                 token_dict_temp = {}
+
             elif "#" not in line and len(line) > 1:
                 tokens = line.strip().split()
                 token_dict_temp[tokens[0]] = [tokens[5]]
                 docIds_prev = docId
 
-
-
     return docIds, sentences, token_dict
+
 
 def read_files(token_file, sentence_file):
     token_dict = json.load(open(token_file))

@@ -4,6 +4,7 @@ import json
 from nltk.corpus import wordnet as wn
 nltk.download('omw-1.4')
 
+
 def getSenseBasline(doc_dict):
     for i in doc_dict:
         print(i)
@@ -14,19 +15,24 @@ def getSenseBasline(doc_dict):
                 doc_dict[i][x].append("0")
     return doc_dict
 
+
 def write2csv(Ids, sentence):
     output = '\n'.join('\t'.join(map(str,row)) for row in zip(Ids, sentence))
     with open('Data/sentences.txt', 'w') as f:
         f.write(output)
 
+
 def write2Json(doc_dict, path):
     with open(path, 'w') as fp:
         json.dump(doc_dict, fp)
+
 
 def main():
     Ids, sentence, doc_dict = utils.read_data("Data/train.txt")
     write2Json(getSenseBasline(doc_dict),'Data/tokens.json')
     write2Json({Ids[i]: sentence[i] for i in range(len(Ids))}, 'Data/sentences.json')
+
+
 if __name__ == "__main__":
     main()
     
