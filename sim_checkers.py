@@ -15,7 +15,7 @@ def base_similarity_check(sentences):
     sentence_embeddings[1:]
     )
 
-    return similarities
+    return similarities.tolist()[0]
 
 
 def mini_similarity_check(sentences):
@@ -31,7 +31,7 @@ def mini_similarity_check(sentences):
     sentence_embeddings[1:]
     )
 
-    return similarities
+    return similarities.tolist()[0]
 
 
 def main():
@@ -43,7 +43,7 @@ def main():
     ]
 
     # print(similarity_check(sentences))
-    for sent, sim in zip(sentences[1:], base_similarity_check(sentences).tolist()[0]):
+    for sent, sim in zip(sentences[1:], base_similarity_check(sentences)):
         print(sent, round(sim, 4))
 
 
