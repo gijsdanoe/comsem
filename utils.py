@@ -35,9 +35,11 @@ def read_files(token_file, sentence_file):
     sentence_dict = json.load(open(sentence_file))
     return token_dict, sentence_dict
     
+
 def read_file(json_file):
     file_js = json.load(open(json_file))
     return file_js
+
 
 def write2Json(doc_dict, path):
     with open(path, 'w') as fp:
