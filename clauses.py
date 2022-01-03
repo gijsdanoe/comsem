@@ -1,6 +1,7 @@
 from nltk.corpus import wordnet
 
-def get_clauses(token):
+
+def get_wn_definition(token):
     sentence_dict = {}
     sentences = []
     result = wordnet.synsets(token)
@@ -8,17 +9,15 @@ def get_clauses(token):
         print('No found: ', word)
 
     for item in result:
-        sentence_dict[item.name()] = item.examples()
+        sentence_dict[item.name()] = item.definition()
     return sentence_dict
 
 
+# def main():
+#     print(get_wn_definition("dog"))
 
 
-def main():
-    print("")
-
-
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
 

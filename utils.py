@@ -26,6 +26,8 @@ def read_data(file):
                 token_dict_temp[tokens[0]] = [tokens[5]]
                 docIds_prev = docId
 
+        token_dict[docIds_prev] = token_dict_temp
+
     return docIds, sentences, token_dict
 
 

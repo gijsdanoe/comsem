@@ -21,12 +21,13 @@ def get_predicted_label(file):
     pass
 
 
-def evaluate(Y_test, Y_pred):
+def evaluate(Y_gold, Y_pred):
 
-    total_count = len(Y_test)
+    total_count = len(Y_gold)
+    print(total_count)
     correct_pred = 0
 
-    for g, p in zip(Y_test, Y_pred):
+    for g, p in zip(Y_gold, Y_pred):
         if g == p:
             correct_pred = correct_pred + 1
 
@@ -36,10 +37,10 @@ def evaluate(Y_test, Y_pred):
 
 
 def main():
-    file = DATA_DIR + "tokens.json"
-    Y_test = get_labels(file, 0)
+    file = DATA_DIR + "tokens_test.json"
+    Y_gold = get_labels(file, 0)
     Y_pred_baseline = get_labels(file, 1)
-    print(f'baseline accuracy: {evaluate(Y_test, Y_pred_baseline)}')
+    print(f'baseline accuracy: {evaluate(Y_gold, Y_pred_baseline)}')
 
 
 if __name__ == '__main__':

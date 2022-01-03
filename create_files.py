@@ -7,7 +7,7 @@ nltk.download('omw-1.4')
 
 def getSenseBasline(doc_dict):
     for i in doc_dict:
-        print(i)
+        # print(i)
         for x in doc_dict[i]:
             try:
                 doc_dict[i][x].append(''+str(wn.synsets(x)[0]).replace("Synset(","").replace(")","").replace("'",""))
@@ -32,9 +32,12 @@ def main():
     write2Json(getSenseBasline(doc_dict),'Data/tokens.json')
     write2Json({Ids[i]: sentence[i] for i in range(len(Ids))}, 'Data/sentences.json')
 
+    Ids_test, sentence_test, doc_dict_test = utils.read_data("Data/test.txt")
+    write2Json(getSenseBasline(doc_dict_test),'Data/tokens_test.json')
+    write2Json({Ids_test[i]: sentence_test[i] for i in range(len(Ids_test))}, 'Data/sentences_test.json')
+    print("length of train set:", len(Ids)) # 7668
+    print("length of test set:", len(Ids_test)) # 1048
 
 if __name__ == "__main__":
     main()
-    
-    
 
