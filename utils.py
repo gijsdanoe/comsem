@@ -25,6 +25,7 @@ def read_data(file):
                 tokens = line.strip().split()
                 token_dict_temp[tokens[0]] = [tokens[5]]
                 docIds_prev = docId
+        token_dict[docIds_prev] = token_dict_temp
 
         token_dict[docIds_prev] = token_dict_temp
 
