@@ -55,10 +55,13 @@ def check_similarity(sentences):
 
 def main():
     sentences = [
-            "Three years later, the coffin was still full of Jello.",
-            "The fish dreamed of escaping the fishbowl and into the toilet where he saw his friend go.",
-            "The person box was packed with jelly many dozens of months later.",
-            "He found a leprechaun in his walnut shell."
+         "I'm a tennis player.",
+         "the arm of the record player", 
+         "a person who participates in or is skilled at some game", 
+         "someone who plays a musical instrument (as a profession)"
+        "any instrument or instrumentality used in fighting or hunting",
+        "someone who takes part in an activity",
+        "a theatrical performer"
     ]
 
     print(sentences[0])

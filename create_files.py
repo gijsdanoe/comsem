@@ -12,7 +12,7 @@ def getSenseBasline(doc_dict):
             try:
                 doc_dict[i][x].append(''+str(wn.synsets(x)[0]).replace("Synset(","").replace(")","").replace("'",""))
             except IndexError:
-                doc_dict[i][x].append("0")
+                doc_dict[i][x].append("O")
     return doc_dict
 
 

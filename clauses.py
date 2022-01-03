@@ -1,3 +1,6 @@
+import nltk
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 from nltk.corpus import wordnet
 
 def get_clauses(token):
@@ -5,17 +8,17 @@ def get_clauses(token):
     sentences = []
     result = wordnet.synsets(token)
     if not result:
-        print('No found: ', word)
+        print('No found: ', token)
 
     for item in result:
-        sentence_dict[item.name()] = item.examples()
+        sentence_dict[item.name()] = item.definition()
     return sentence_dict
 
 
 
 
 def main():
-    print("")
+    print(get_clauses("arm"))
 
 
 if __name__ == "__main__":
