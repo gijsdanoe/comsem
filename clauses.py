@@ -16,20 +16,12 @@ def get_wn_definition(token):
     return sentence_dict
 
 
-# def main():
-#     print(get_wn_definition("dog"))
-
-
-<<<<<<< HEAD
-# if __name__ == "__main__":
-#     main()
-=======
 def main():
     print(get_clauses("arm"))
 
 
 if __name__ == "__main__":
     main()
->>>>>>> 6c0d259c061ade4de841462bcd526fbcb765a0e6
+
 
 
