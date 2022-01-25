@@ -1,5 +1,12 @@
 import json
 
+
+PRON = ['i', 'we', 'you', 'he', 'she', 'it', 'they', 'this',
+        'these', 'that', 'those', 'who', 'which', 'what',
+        'myself', 'herself', 'himself', 'themself', 'yours',
+        'mine',]
+
+
 def read_data(file):
     """Read in data sets and returns sentences and labels"""
     docIds = []
