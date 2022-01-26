@@ -46,10 +46,15 @@ def test_baseline(json_path, filename):
 
 
 def main():
+    # test on test set
     json_path = 'Data/sentences_test.json'
     filename = "result_baseline_on_testset"
     test_baseline(json_path, filename)
 
+    # test on dev set
+
+
+    # test on eval set
 
 
 
