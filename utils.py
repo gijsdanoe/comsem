@@ -88,10 +88,25 @@ def skip_token(token, tag):
         return True
     if token in string.punctuation :
         return True
-    if token.lower().startswith('whose'):
+
+    # filter some words which are not consistent
+    # in pos tags of the tokens from sentences,
+    # and the tokens from the token column in the data.
+    if token.lower() == 'whose':
         return True
-    if token.startswith('Consuming~Kids'):
+    if token =='Consuming~Kids':
         return True
+    if token == 'Mary':
+        return True
+    if token == 'either':
+        return True
+    if token == 'that':
+        return True
+    if token == 'Taninna':
+        return True
+    if token == 'Chamber~of~Deputies':
+        return True
+
     return False
 
 

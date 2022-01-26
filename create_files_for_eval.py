@@ -11,29 +11,6 @@ nltk.download('omw-1.4')
 import utils
 
 
-# def create_arg_parser():
-#     """
-#     Description:
-
-#     This method is an arg parser
-
-#     Return
-
-#     This method returns a map with commandline parameters taken from the user
-#     """
-#     parser = argparse.ArgumentParser()
-#     parser.add_argument("-ts", "--testset",type=str, default='rbf',
-#                         help="Input kernel")
-#     parser.add_argument("-n1", "--n1", default=1, type=int,
-#                         help="Ngram Start point")
-#     parser.add_argument("-n2", "--n2", default=1, type=int,
-#                         help="Ngram End point")
-#     parser.add_argument("-t", "--tfidf", action="store_true",
-#                         help="Use the TF-IDF vectorizer instead of CountVectorizer")
-#     args = parser.parse_args()
-#     return args
-
-
 def create_tokens_labels_filtered(json_path, filename):
 
 
@@ -70,10 +47,21 @@ def create_tokens_labels_filtered(json_path, filename):
 
 
 def main():
+
+    # Create a file of tokens labels filtered from test set to evaluate.
     json_path = 'Data/tokens_labels_test.json'
     filename = "tokens_labels_test_filtered_for_eval"
     create_tokens_labels_filtered(json_path, filename)
 
+    # Create a file of tokens labels filtered from dev set to evaluate.
+    json_path = 'Data/tokens_labels_dev.json'
+    filename = "tokens_labels_dev_filtered_for_eval"
+    create_tokens_labels_filtered(json_path, filename)
+
+    # Create a file of tokens labels filtered from dev set to evaluate.
+    json_path = 'Data/tokens_labels_eval.json'
+    filename = "tokens_labels_eval_filtered_for_eval"
+    create_tokens_labels_filtered(json_path, filename)
 
 
 

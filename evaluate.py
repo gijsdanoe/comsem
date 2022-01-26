@@ -24,7 +24,7 @@ def write_result_to_csv(c1, c2, c3, c4, filename):
     df.to_csv(OUTPUT_DIR + filename + ".csv", index=False)
 
 
-def evaluate(test_gold_filepath, result_filepath):
+def evaluate(test_gold_filepath, result_filepath, filename):
 
     tokens = []
     labels_gold = []
@@ -54,17 +54,35 @@ def evaluate(test_gold_filepath, result_filepath):
             matches.append("0")
 
 
-    print(len(tokens), len(labels_gold), len(labels_baseline), len(matches))
-    write_result_to_csv(tokens, labels_gold, labels_baseline, matches, "results_baseline")
+    # print(len(tokens), len(labels_gold), len(labels_baseline), len(matches))
+    write_result_to_csv(tokens, labels_gold, labels_baseline, matches, filename)
 
-    print("Accuracy baseline", count_match / len(labels_gold) * 100)
-    print(count_match)
+    print(round(count_match / len(labels_gold) * 100, 2))
+    # print(count_match)
 
 
 def main():
+    # Evaluate baseline on test set.
     test_gold_filepath = "Output/tokens_labels_test_filtered_for_eval.csv"
-    result_filepath = "Output/result_baseline_on_testset.csv"
-    print(evaluate(test_gold_filepath, result_filepath))
+    output_filepath = "Output/output_baseline_on_testset.csv"
+    filename = "result_baseline_on_testset"
+    print("Accuracy baseline on testset:")
+    print(evaluate(test_gold_filepath, output_filepath, filename))
+
+    # Evaluate baseline on dev set.
+    dev_gold_filepath = "Output/tokens_labels_dev_filtered_for_eval.csv"
+    output_filepath = "Output/output_baseline_on_devset.csv"
+    filename = "result_baseline_on_devset"
+    print("Accuracy baseline on devset:")
+    print(evaluate(dev_gold_filepath, output_filepath, filename))
+
+    # Evaluate baseline on eval set.
+    eval_gold_filepath = "Output/tokens_labels_eval_filtered_for_eval.csv"
+    output_filepath = "Output/output_baseline_on_evalset.csv"
+    filename = "result_baseline_on_evalset"
+    print("Accuracy baseline on evalset:")
+    print(evaluate(eval_gold_filepath, output_filepath, filename))
+
 
 
 

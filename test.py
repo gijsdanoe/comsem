@@ -36,25 +36,21 @@ def test_baseline(json_path, filename):
     utils.write_to_csv(tokens, labels, filename)
 
 
-# def write_to_csv(c1, c2, c3, c4, filename):
-#     df = pd.DataFrame()
-#     df['Token'] = c1
-#     df['Test'] = c2
-#     df['Predict'] = c3
-#     df['Match'] = c4
-#     df.to_csv(filename, index=False)
-
-
 def main():
     # test on test set
     json_path = 'Data/sentences_test.json'
-    filename = "result_baseline_on_testset"
+    filename = "output_baseline_on_testset"
     test_baseline(json_path, filename)
 
     # test on dev set
-
+    json_path = 'Data/sentences_dev.json'
+    filename = "output_baseline_on_devset"
+    test_baseline(json_path, filename)
 
     # test on eval set
+    json_path = 'Data/sentences_eval.json'
+    filename = "output_baseline_on_evalset"
+    test_baseline(json_path, filename)
 
 
 
