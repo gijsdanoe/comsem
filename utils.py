@@ -8,27 +8,43 @@ def read_data(file):
     token_dict = {}
     token_dict_temp = {}
     docIds_prev = ""
+    sentence = ""
+    add_sent = False
     with open(file, encoding='utf-8') as f:
         docId = ""
         for line in f:
             if "# newdoc id = " in line:
                 docId = line.replace("# newdoc id = ","").replace("\n","")
                 docIds.append(docId)
-
-            elif "# raw sent = " in line:
-                sentences.append(line.replace("# raw sent = ",""))
-
+                add_sent = True
                 if token_dict_temp:
                     token_dict[docIds_prev] = token_dict_temp
                 token_dict_temp = {}
+                if len(sentence) > 1:
+                    sentences.append(sentence)
+                    sentence = ""
+
+           # elif "# raw sent = " in line:
+            #    if add_sent:
+            #        sentences.append(line.replace("# raw sent = ","").replace("\n",""))
+             #       add_sent = False
+
+    #            if token_dict_temp:
+      #              token_dict[docIds_prev] = token_dict_temp
+      #          token_dict_temp = {}
 
             elif "#" not in line and len(line) > 1:
                 tokens = line.strip().split()
+                if len(sentence) <1:
+                    sentence+= tokens[0]
+                else:
+                    sentence+= " "+ tokens[0]
                 token_dict_temp[tokens[0]] = [tokens[5]]
                 docIds_prev = docId
         token_dict[docIds_prev] = token_dict_temp
 
         token_dict[docIds_prev] = token_dict_temp
+        sentences.append(sentence)
 
     return docIds, sentences, token_dict
 
