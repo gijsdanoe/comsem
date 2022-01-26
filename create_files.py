@@ -30,7 +30,7 @@ def write2Json(doc_dict, path):
 def main():
     Ids, sentence, doc_dict = utils.read_data("Data/train.txt")
 
-    # get tokens and their labels from data file and
+    # get tokens and their labels from trainset file and
     # save them to a json file
     write2Json(doc_dict, 'Data/tokens_labels_train.json')
 
@@ -38,6 +38,11 @@ def main():
     write2Json({Ids[i]: sentence[i] for i in range(len(Ids))}, 'Data/sentences.json')
 
     Ids_test, sentence_test, doc_dict_test = utils.read_data("Data/test.txt")
+
+    # get tokens and their labels from trainset file and
+    # save them to a json file
+    write2Json(doc_dict_test, 'Data/tokens_labels_test.json')
+
     write2Json(getSenseBasline(doc_dict_test),'Data/tokens_test.json')
     write2Json({Ids_test[i]: sentence_test[i] for i in range(len(Ids_test))}, 'Data/sentences_test.json')
     # print("length of train set:", len(Ids)) # 7668

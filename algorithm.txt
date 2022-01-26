@@ -1,8 +1,9 @@
 1. create the temp_lookupdict from trainset
 temp_dict = {}
 
-- check if token is pronoun: yes -> skip
-- check if token is prop name: yes -> skip
+- check if token is pronoun: yes -> skip (POS tag)
+- check if digit: yes -> skip
+- check if token is prop name: yes -> skip (POS tag)
 both no:
 	check if token in temp_dict:
 		no: add it and its synset/ "O" (don't need to check if searchable in WN here because in the data you already know which one is "O")
@@ -25,16 +26,20 @@ return loopkup_dict
 3. baseline system
 - input an raw sentence
 - tokenize the sentence
-- dict = {token: synset}
 - for each token in sentence:
+	- check if pronoun (POS tag)
+	- check if digit
+	- check if prop name (POS tag)
+
 	- check if the token in lookup_dict:
-		yes: take its synset, add to dict[token]
+		yes: take its synset
 		no:
 			- check if token is searchable in WN:
-				+ no: get "O", add to dict[token]
-				+ yes: get the 1st synset, add to dict[token]
+				+ yes: get the 1st synset match pos
+				+ if no synset match pos, get the 1st synset.
+				+ no: get "O"
 
-- return dict
+- return {tokens, synsets}
 
 4. main
 create a csv with 1 column token, 1 column data label, 1 column baseline label, 1 column 1 and 0's
