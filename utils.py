@@ -1,5 +1,8 @@
 import json
+import pandas as pd
+import string
 
+OUTPUT_DIR = 'Output/'
 
 def read_data(file):
     """Read in data sets and returns sentences and labels"""
@@ -63,4 +66,37 @@ def read_file(json_file):
 def write2Json(doc_dict, path):
     with open(path, 'w') as fp:
         json.dump(doc_dict, fp)
-    
+
+
+def skip_token(token, tag):
+    if tag.startswith('NNP'):
+        return True
+    if tag.startswith('PRP'):
+        return True
+    if tag.startswith('DT'):
+        return True
+    if tag.startswith('WP'):
+        return True
+
+    if token[0].isdigit():
+        return True
+    if token.startswith('http'):
+        return True
+    if token.startswith('//'):
+        return True
+    if token.startswith('`'):
+        return True
+    if token in string.punctuation :
+        return True
+    if token.lower().startswith('whose'):
+        return True
+    if token.startswith('Consuming~Kids'):
+        return True
+    return False
+
+
+def write_to_csv(c1, c2, filename):
+    df = pd.DataFrame()
+    df['Token'] = c1
+    df['Predict'] = c2
+    df.to_csv(OUTPUT_DIR + filename + ".csv", index=False)
