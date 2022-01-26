@@ -1,0 +1,8 @@
+Accuracy baseline on testset:
+79.33
+
+Accuracy baseline on devset:
+78.52
+
+Accuracy baseline on evalset:
+78.57
