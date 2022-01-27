@@ -2,11 +2,16 @@ I/ Baseline_2:
 
 1. skip token:
 
-- check if token is pronoun: yes -> skip (POS tag)
+- check if token is pronoun: yes -> skip (using POS tag)
 - check if digit: yes -> skip
-- check if token is prop name: yes -> skip (POS tag)
+- check if token is prop name: yes -> skip (using POS tag)
 - check if token is punctuation: yes -> skip
+- check if url: yes -> skip
+- also filter some words and tokens it can't be filtered from above (for
+example, the same token but inconsistently tokenized or pos-tagged in the
+output of the system and the evaluation files*.)
 
+* see 7.
 
 2. create the temp_lookupdict from trainset
 temp_dict = {}
@@ -34,6 +39,7 @@ return loopkup_dict
 4. baseline system
 - input an raw sentence
 - tokenize the sentence
+- get pos tag of tokens
 - for each token in sentence:
 	- check skip token
 	- check if the token in lookup_dict:
@@ -60,4 +66,23 @@ return loopkup_dict
 - if both labels are same, get "1", otherwise "0"
 - aslo check the Leacock Chodorow Similarity between the gold and predict labels to see if they are the same meaning. If yes, get "1", otherwise "0".
 - count the 1's and divide the count to total of tokens/labels.
+
+
+II/ System:
+
+- input an target sentence
+- tokenize the target sentence
+- get pos tag of tokens
+- sentences [] (including target sentences and all glosses/examples)
+- sentences.append(target_sentence)
+- result_dict {}
+- for each token in sentence:
+	- check skip token
+	- check if token is searchable in WN
+		- no: get "O"
+		- yes:
+			+ get synsets with its pos tag
+			+ get definition of each synset
+			+ each definition appends to sentences[]
+
 
