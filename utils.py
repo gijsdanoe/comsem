@@ -114,4 +114,4 @@ def write_to_csv(c1, c2, filename):
     df = pd.DataFrame()
     df['Token'] = c1
     df['Predict'] = c2
-    df.to_csv(OUTPUT_DIR + filename + ".csv", index=False)
+    df.to_csv(OUTPUT_DIR + filename + ".csv", index=False, header=False)

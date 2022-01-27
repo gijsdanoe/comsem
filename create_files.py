@@ -59,6 +59,7 @@ def main():
     write2Json(doc_dict_eval, 'Data/tokens_labels_eval.json')
     write2Json({Ids_eval[i]: sentence_eval[i] for i in range(len(Ids_eval))}, 'Data/sentences_eval.json')
 
+
 if __name__ == "__main__":
     main()
 

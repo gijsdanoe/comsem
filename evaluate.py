@@ -5,6 +5,7 @@ import csv
 import nltk
 import pandas as pd
 from nltk.corpus import wordnet as wn
+from nltk.corpus.reader.wordnet import WordNetError
 from nltk.tokenize import word_tokenize
 nltk.download('omw-1.4')
 
@@ -21,7 +22,7 @@ def write_result_to_csv(c1, c2, c3, c4, filename):
     df['Labels gold'] = c2
     df['Labels baseline'] = c3
     df['Matches'] = c4
-    df.to_csv(OUTPUT_DIR + filename + ".csv", index=False)
+    df.to_csv(OUTPUT_DIR + filename + ".csv", index=False, header=False)
 
 
 def evaluate(test_gold_filepath, result_filepath, filename):
@@ -50,11 +51,24 @@ def evaluate(test_gold_filepath, result_filepath, filename):
         if i == j:
             matches.append("1")
             count_match = count_match + 1
+        elif i != 'O' and j != 'O':
+            # print(i, j)
+            try:
+                a = wn.synset(i)
+                b = wn.synset(j)
+
+                if a.name()[-4] == b.name()[-4] and a.lch_similarity(b) == a.lch_similarity(a):
+                    matches.append("1")
+                    count_match = count_match + 1
+                else:
+                    matches.append("0")
+            except WordNetError:
+                matches.append("0")
         else:
             matches.append("0")
 
 
-    # print(len(tokens), len(labels_gold), len(labels_baseline), len(matches))
+    print(len(tokens), len(labels_gold), len(labels_baseline), len(matches))
     write_result_to_csv(tokens, labels_gold, labels_baseline, matches, filename)
 
     print(round(count_match / len(labels_gold) * 100, 2))

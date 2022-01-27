@@ -58,5 +58,6 @@ return loopkup_dict
 7. Evaluation (on each set):
 - save gold tokens labels (created from 6), and labels produced by bl into a csv file (easy for comparision and error analysis)
 - if both labels are same, get "1", otherwise "0"
+- aslo check the Leacock Chodorow Similarity between the gold and predict labels to see if they are the same meaning. If yes, get "1", otherwise "0".
 - count the 1's and divide the count to total of tokens/labels.
 

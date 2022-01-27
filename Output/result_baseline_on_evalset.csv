@@ -1,5 +1,3 @@
-Token,Labels gold,Labels baseline,Matches
-Token,Predict,Predict,1
 man,O,man.n.01,0
 is,O,O,1
 opening,open.v.01,open.v.01,1
@@ -35,7 +33,7 @@ Egyptian,country.n.02,country.n.02,1
 government,government.n.01,government.n.01,1
 on,O,O,1
 dismissed,dismiss.v.01,dismiss.v.01,1
-speculation,speculation.n.01,guess.n.01,0
+speculation,speculation.n.01,guess.n.01,1
 group,group.n.01,group.n.01,1
 of,O,O,1
 missing,missing.a.01,miss.v.06,0
@@ -45,7 +43,7 @@ in,O,O,1
 bombings,bombing.n.01,bombing.n.01,1
 is,O,O,1
 meters,meter.n.01,meter.n.01,1
-high,high.a.01,high.a.02,0
+high,high.a.01,high.a.02,1
 movie,movie.n.01,movie.n.01,1
 starts,start.v.01,start.v.02,0
 at,O,O,1
@@ -81,7 +79,7 @@ about,O,O,1
 noise,noise.n.01,noise.n.01,1
 say,say.v.01,say.v.01,1
 is,O,O,1
-seriously,seriously.r.02,seriously.r.01,0
+seriously,seriously.r.02,seriously.r.01,1
 ill,ill.a.01,ill.a.01,1
 is,O,O,1
 very,very.r.01,very.r.01,1
@@ -129,7 +127,7 @@ table,table.n.02,table.n.02,1
 has,have_on.v.01,O,0
 hat,hat.n.01,hat.n.01,1
 on,O,O,1
-final,final.a.02,final.a.01,0
+final,final.a.02,final.a.01,1
 score,score.n.03,score.n.03,1
 was,be.v.06,O,0
 composed,compose.v.02,compose.v.02,1
@@ -151,7 +149,7 @@ was,O,O,1
 canceled,cancel.v.01,cancel.v.01,1
 because,O,O,1
 of,O,O,1
-terrible,terrible.a.03,terrible.a.01,0
+terrible,terrible.a.03,terrible.a.01,1
 storm,storm.n.01,storm.n.01,1
 read,read.v.01,read.v.01,1
 letter,letter.n.01,letter.n.01,1
@@ -175,11 +173,11 @@ up,O,O,1
 embraces,embrace.v.02,embrace.v.01,0
 How,O,O,1
 many,O,O,1
-films,film.n.01,movie.n.01,0
+films,film.n.01,movie.n.01,1
 did,O,O,1
 watch,watch.v.01,watch.n.01,0
 yesterday,day.n.03,O,0
-hype,hype.n.01,ballyhoo.n.01,0
+hype,hype.n.01,ballyhoo.n.01,1
 began,begin.v.01,begin.v.01,1
 to,O,O,1
 learn,learn.v.01,learn.v.01,1
@@ -208,7 +206,7 @@ heavy,heavy.a.01,heavy.a.01,1
 could,O,O,1
 not,O,O,1
 lift,lift.v.01,lift.v.01,1
-drunken,drunken.a.01,bibulous.s.01,0
+drunken,drunken.a.01,bibulous.s.01,1
 man,man.n.01,man.n.01,1
 could,O,O,1
 n't,O,O,1
@@ -417,7 +415,7 @@ watching,watch.v.03,watch.v.03,1
 movie,movie.n.01,movie.n.01,1
 In~other~words,O,O,1
 's,O,O,1
-dumb,dumb.a.01,dense.s.04,0
+dumb,dumb.a.01,dense.s.04,1
 of,O,O,1
 friends,friend.n.01,friend.n.01,1
 like,like.v.02,like.v.02,1
@@ -437,7 +435,7 @@ support,support.n.03,support.v.02,0
 of,O,O,1
 plan,plan.n.01,plan.n.01,1
 was,O,O,1
-poor,poor.a.02,poor.a.04,0
+poor,poor.a.02,poor.a.04,1
 and,O,O,1
 lived,live.v.01,live.v.01,1
 in,O,O,1
@@ -450,7 +448,7 @@ has,have.v.04,O,0
 new,new.a.01,new.a.01,1
 car,car.n.01,car.n.01,1
 and,O,O,1
-old,old.a.02,old.a.01,0
+old,old.a.02,old.a.01,1
 car,car.n.01,car.n.01,1
 banged,bang.v.01,bang.v.01,1
 against,O,O,1
@@ -662,7 +660,7 @@ itches,itch.v.03,itch.v.03,1
 houses,house.n.01,house.n.01,1
 are,O,O,1
 years,year.n.01,year.n.01,1
-old,old.a.02,old.a.01,0
+old,old.a.02,old.a.01,1
 walked,walk.v.01,walk.v.01,1
 about,O,O,1
 mile,mile.n.01,mile.n.01,1
@@ -755,7 +753,7 @@ giraffe,giraffe.n.01,giraffe.n.01,1
 always,O,O,1
 listens,listen.v.01,listen.v.01,1
 to,O,O,1
-serious,serious.a.04,serious.a.03,0
+serious,serious.a.04,serious.a.03,1
 music,music.n.01,music.n.01,1
 chose,choose.v.01,choose.v.01,1
 nice,nice.a.01,nice.a.01,1
@@ -771,7 +769,7 @@ Where,location.n.01,location.n.01,1
 is,O,O,1
 journey,journey.n.01,journey.n.01,1
 taking,take.v.27,take.v.18,0
-cottage,cottage.n.01,bungalow.n.01,0
+cottage,cottage.n.01,bungalow.n.01,1
 reminds,remind.v.01,remind.v.01,1
 of,O,O,1
 one,cottage.n.01,person.n.01,0
@@ -844,8 +842,8 @@ Italian,country.n.02,country.n.02,1
 director,director.n.04,director.n.04,1
 is,O,O,1
 awarded,award.v.01,award.v.01,1
-honorary,honorary.a.01,honorary.s.01,0
-Oscar,oscar.n.01,academy_award.n.01,0
+honorary,honorary.a.01,honorary.s.01,1
+Oscar,oscar.n.01,academy_award.n.01,1
 'm,O,O,1
 very,very.r.01,very.r.01,1
 sensitive,sensitive.a.01,sensitive.a.01,1
@@ -871,7 +869,7 @@ flock,flock.n.03,flock.n.01,0
 of,O,O,1
 white,white.a.01,white.a.01,1
 sheep,sheep.n.01,sheep.n.01,1
-assure,assure.v.01,guarantee.v.02,0
+assure,assure.v.01,guarantee.v.02,1
 error,error.n.01,error.n.01,1
 like,O,like.v.02,0
 will,O,O,1
@@ -904,7 +902,7 @@ exhausted,exhausted.a.01,exhausted.a.01,1
 dentist,dentist.n.01,dentist.n.01,1
 put,put_in.v.01,put.v.01,0
 in,O,O,1
-temporary,temporary.a.01,impermanent.a.01,0
+temporary,temporary.a.01,impermanent.a.01,1
 filling,filling.n.05,fill.v.01,0
 is,O,O,1
 n't,O,O,1
@@ -954,7 +952,7 @@ rose,rose.n.01,rise.v.01,0
 in,O,O,1
 button-hole,button_hole.n.01,O,0
 supports,support.v.05,support.v.01,0
-suspicion,suspicion.n.01,intuition.n.02,0
+suspicion,suspicion.n.01,intuition.n.02,1
 bank,bank.n.02,bank.n.02,1
 employee,employee.n.01,employee.n.01,1
 was,O,O,1
@@ -974,7 +972,7 @@ visited,visit.v.01,visit.v.02,0
 in,O,O,1
 're,O,O,1
 being,O,O,1
-contentious,contentious.a.01,contentious.s.01,0
+contentious,contentious.a.01,contentious.s.01,1
 is,O,O,1
 n't,O,O,1
 safe,safe.a.01,safe.a.01,1
@@ -982,7 +980,7 @@ Many,O,O,1
 restaurants,restaurant.n.01,restaurant.n.01,1
 now,O,O,1
 have,have.v.02,O,0
-free,free.a.03,free.a.04,0
+free,free.a.03,free.a.04,1
 dogs,dog.n.01,dog.n.01,1
 started,start.v.01,start.v.02,0
 barking,bark.v.04,bark.v.04,1
@@ -1006,7 +1004,7 @@ to,O,O,1
 is,O,O,1
 puzzled,puzzled.a.01,puzzle.v.01,0
 is,O,O,1
-bustling,bustle_about.v.01,bustle.v.01,0
+bustling,bustle_about.v.01,bustle.v.01,1
 about,O,O,1
 in,O,O,1
 kitchen,kitchen.n.01,kitchen.n.01,1
@@ -1029,7 +1027,7 @@ kilograms,kilogram.n.01,kilogram.n.01,1
 do,O,O,1
 weigh,weigh.v.01,weigh.v.01,1
 's,O,O,1
-futile,futile.a.01,futile.s.01,0
+futile,futile.a.01,futile.s.01,1
 lovely,lovely.a.01,lovely.a.01,1
 puppies,puppy.n.01,puppy.n.01,1
 are,be.v.01,O,0
@@ -1044,7 +1042,7 @@ is,O,O,1
 very,very.r.01,very.r.01,1
 bright,bright.a.03,bright.a.03,1
 is,O,O,1
-self-centered,self-centered.a.01,egoistic.a.01,0
+self-centered,self-centered.a.01,egoistic.a.01,1
 put,put.v.01,put.v.01,1
 few,O,O,1
 blueberries,blueberry.n.02,blueberry.n.01,0
@@ -1071,7 +1069,7 @@ awkward,awkward.a.02,awkward.a.06,0
 actual,actual.a.01,actual.a.01,1
 cost,cost.n.01,cost.v.01,0
 was,O,O,1
-higher,high.a.01,high.a.02,0
+higher,high.a.01,high.a.02,1
 than,O,O,1
 estimate,estimate.n.01,estimate.v.01,0
 'm,O,O,1
@@ -1205,7 +1203,7 @@ gun,gun.n.01,gun.n.01,1
 so,O,so.r.01,0
 shot,shoot.v.01,shoot.v.01,1
 're,O,O,1
-fabulous,fabulous.a.01,fabulous.s.01,0
+fabulous,fabulous.a.01,fabulous.s.01,1
 kissed,kiss.v.01,kiss.v.01,1
 was,O,O,1
 already,O,O,1
@@ -1263,7 +1261,7 @@ been,O,O,1
 stolen,steal.v.01,steal.v.01,1
 ear,ear.n.01,ear.n.01,1
 is,O,O,1
-itching,itch.n.03,itching.n.01,0
+itching,itch.n.03,itching.n.01,1
 poured,pour.v.01,pour.v.01,1
 water,water.n.06,water.n.06,1
 into,O,O,1
@@ -1317,7 +1315,7 @@ labeled,label.v.02,label.v.01,0
 baggage,baggage.n.01,baggage.n.01,1
 did,O,O,1
 n't,O,O,1
-flunk,flunk.v.01,fail.v.07,0
+flunk,flunk.v.01,fail.v.07,1
 title,title.n.02,title.n.02,1
 of,O,O,1
 play,play.n.01,play.v.01,0
@@ -1349,7 +1347,7 @@ about,O,O,1
 eighty~thousand,O,O,1
 words,word.n.01,word.n.01,1
 know,know.v.01,know.v.01,1
-dirty,dirty.a.02,dirty.a.01,0
+dirty,dirty.a.02,dirty.a.01,1
 jokes,joke.n.01,joke.n.01,1
 but,O,O,1
 do,O,O,1
@@ -1359,7 +1357,7 @@ Cinderella,female.n.02,cinderella.n.01,0
 had,have.v.01,O,0
 two,O,O,1
 evil,evil.a.01,evil.a.01,1
-stepsisters,stepsister.n.01,half_sister.n.01,0
+stepsisters,stepsister.n.01,half_sister.n.01,1
 has,O,O,1
 drawn,draw_up.v.04,pull.v.01,0
 up,O,O,1
@@ -1385,7 +1383,7 @@ confusing,confuse.v.01,confuse.v.01,1
 with,O,O,1
 is,O,O,1
 n't,O,O,1
-mad,mad.a.01,mad.a.02,0
+mad,mad.a.01,mad.a.02,1
 at,O,O,1
 Do,O,O,1
 like,like.v.03,like.v.02,0
@@ -1399,7 +1397,7 @@ originated,originate.v.02,originate.v.01,0
 psychoanalysis,psychoanalysis.n.01,psychoanalysis.n.01,1
 prisoners,prisoner.n.01,prisoner.n.01,1
 have,O,O,1
-vanished,vanish.v.01,disappear.v.01,0
+vanished,vanish.v.01,disappear.v.01,1
 zipped,zip_up.v.01,zip_up.v.01,1
 up,O,O,1
 jacket,jacket.n.01,jacket.n.01,1
@@ -1443,7 +1441,7 @@ compared,compare.v.01,compare.v.03,0
 answers,answer.n.02,answer.v.01,0
 with,O,O,1
 's,answer.n.02,O,0
-researchers,researcher.n.01,research_worker.n.01,0
+researchers,researcher.n.01,research_worker.n.01,1
 trained,train.v.04,train.v.01,0
 monkeys,monkey.n.01,monkey.n.01,1
 to,O,O,1
@@ -1573,11 +1571,11 @@ pregnant,pregnant.a.01,pregnant.a.01,1
 play,play.v.01,play.v.01,1
 video~games,video_game.n.01,O,0
 is,O,O,1
-stoic,stoic.a.01,stoic.s.01,0
+stoic,stoic.a.01,stoic.s.01,1
 room,room.n.01,room.n.01,1
 had,have.v.02,O,0
 nice,nice.a.01,nice.a.01,1
-cozy,cozy.a.01,cozy.a.02,0
+cozy,cozy.a.01,cozy.a.02,1
 feel,feel.n.02,feel.n.01,0
 are,O,O,1
 bored,bored.a.01,bore.v.01,0
@@ -1600,7 +1598,7 @@ storm,storm.n.01,storm.n.01,1
 rattled,rattle.v.02,rattle.v.01,0
 shutters,shutter.n.02,shutter.n.01,0
 is,O,O,1
-dark-skinned,dark-skinned.a.01,colored.s.02,0
+dark-skinned,dark-skinned.a.01,colored.s.02,1
 planted,plant.v.01,plant.v.01,1
 three,O,O,1
 apple~trees,apple_tree.n.01,apple_tree.n.01,1
@@ -1630,7 +1628,7 @@ manual,manual.n.01,manual.a.01,0
 'm,O,O,1
 already,O,O,1
 married,married.a.01,marry.v.01,0
-Polyglots,polyglot.n.01,linguist.n.02,0
+Polyglots,polyglot.n.01,linguist.n.02,1
 are,O,O,1
 sexier,sexy.a.01,sexy.a.01,1
 adores,adore.v.01,adore.v.01,1
@@ -1699,7 +1697,7 @@ radio,radio.n.02,radio.n.02,1
 's,O,O,1
 anorexic,anorexic.a.01,anorexic.n.01,0
 How,O,O,1
-old,old.a.02,old.a.01,0
+old,old.a.02,old.a.01,1
 is,O,O,1
 tree,tree.n.01,tree.n.01,1
 is,O,O,1
@@ -1720,12 +1718,12 @@ daughter,daughter.n.01,daughter.n.01,1
 was,O,O,1
 born,bear.v.02,bear.v.02,1
 in,O,O,1
-highest,high.a.01,high.a.02,0
+highest,high.a.01,high.a.02,1
 mountain,mountain.n.01,mountain.n.01,1
 in,O,O,1
 is,O,O,1
 meters,meter.n.01,meter.n.01,1
-high,high.a.01,high.a.02,0
+high,high.a.01,high.a.02,1
 Poaching,poach.v.01,poach.v.01,1
 is,O,O,1
 illegal,illegal.a.01,illegal.a.01,1
@@ -1888,7 +1886,7 @@ take,take.v.02,take_place.v.01,0
 approximately,O,O,1
 five,O,O,1
 hours,hour.n.01,hour.n.01,1
-jotted,jot_down.v.01,jot.v.01,0
+jotted,jot_down.v.01,jot.v.01,1
 down,O,O,1
 something,entity.n.01,entity.n.01,1
 in,O,O,1
@@ -1904,7 +1902,7 @@ is,O,O,1
 out,out.r.01,O,0
 now,O,O,1
 anal,anal.a.01,anal.a.01,1
-fissures,fissure.n.01,crevice.n.01,0
+fissures,fissure.n.01,crevice.n.01,1
 curable,curable.a.01,curable.a.01,1
 is,O,O,1
 going,go.v.01,go.v.01,1
@@ -1983,7 +1981,7 @@ learn,learn.v.01,learn.v.01,1
 used,O,O,1
 to,O,O,1
 be,be.v.08,O,0
-cop,cop.n.01,bull.n.05,0
+cop,cop.n.01,bull.n.05,1
 respects,respect.v.01,respect.v.01,1
 opinion,opinion.n.01,opinion.n.01,1
 was,O,O,1
@@ -2043,11 +2041,11 @@ government,government.n.01,government.n.01,1
 and,O,O,1
 non-profit,nonprofit.a.01,O,0
 are,O,O,1
-launching,launch.v.01,establish.v.01,0
+launching,launch.v.01,establish.v.01,1
 new,new.a.01,new.a.01,1
-appeal,appeal.n.01,entreaty.n.01,0
+appeal,appeal.n.01,entreaty.n.01,1
 to,O,O,1
-save,save.v.01,salvage.v.01,0
+save,save.v.01,salvage.v.01,1
 critically,critically.r.01,critically.r.01,1
 endangered,endangered.a.01,endanger.v.01,0
 one-horned~rhino,indian_rhinoceros.n.01,O,0
@@ -2138,7 +2136,7 @@ are,be.v.02,O,0
 's,O,O,1
 took,take_off.v.06,take.v.02,0
 off,O,O,1
-old,old.a.02,old.a.01,0
+old,old.a.02,old.a.01,1
 shoes,shoe.n.01,shoe.n.01,1
 and,O,O,1
 put,put_on.v.01,put.v.01,0
@@ -2241,11 +2239,11 @@ in,O,O,1
 morning,morning.n.01,morning.n.01,1
 is,O,O,1
 bit,O,O,1
-crazy,crazy.a.01,crazy.a.05,0
+crazy,crazy.a.01,crazy.a.05,1
 note,note.n.01,note.n.01,1
 is,O,O,1
 jotted,jot.v.01,jot.v.01,1
-directly,directly.r.02,directly.r.01,0
+directly,directly.r.02,directly.r.01,1
 on,O,O,1
 envelope,envelope.n.01,envelope.n.01,1
 swam,swim.v.01,swim.v.01,1
@@ -2280,7 +2278,7 @@ were,O,O,1
 ripped,rip_off.v.01,rip_up.v.01,0
 off,O,O,1
 at,O,O,1
-nightclub,nightclub.n.01,cabaret.n.01,0
+nightclub,nightclub.n.01,cabaret.n.01,1
 tsunami,tsunami.n.01,tsunami.n.01,1
 alert,alert.n.01,alert.a.01,0
 was,O,O,1
@@ -2321,7 +2319,7 @@ much,O,O,1
 bigger,big.a.01,big.a.01,1
 than,O,O,1
 'm,O,O,1
-frantic,frantic.a.01,frantic.s.01,0
+frantic,frantic.a.01,frantic.s.01,1
 heard,hear.v.01,hear.v.01,1
 phone,phone.n.01,phone.n.01,1
 answered,answer.v.02,answer.v.02,1
@@ -2398,7 +2396,7 @@ busy,busy.a.01,busy.a.01,1
 right,O,O,1
 now,O,O,1
 Despite,O,O,1
-riches,riches.n.01,wealth.n.03,0
+riches,riches.n.01,wealth.n.03,1
 's,O,O,1
 not,O,O,1
 contented,content.a.01,content.v.01,0
@@ -2408,7 +2406,7 @@ subscribers,subscriber.n.02,subscriber.n.01,0
 does,O,O,1
 magazine,magazine.n.01,magazine.n.02,0
 have,have.v.02,O,0
-peeled,peel.v.01,skin.v.04,0
+peeled,peel.v.01,skin.v.04,1
 apple,apple.n.01,apple.n.01,1
 fool,fool.n.01,fool.n.01,1
 've,O,O,1
@@ -2443,7 +2441,7 @@ is,O,O,1
 lying,lie.v.05,lie.v.05,1
 seeds,seed.n.01,seed.n.01,1
 have,O,O,1
-germinated,germinate.v.01,shoot.v.19,0
+germinated,germinate.v.01,shoot.v.19,1
 watched,watch.v.03,watch.v.03,1
 Swedish,country.n.02,country.n.02,1
 movie,movie.n.01,movie.n.01,1
@@ -2468,7 +2466,7 @@ and,O,O,1
 innocent,innocent.a.01,innocent.a.01,1
 owns,own.v.01,own.v.01,1
 car,car.n.01,car.n.01,1
-dealership,dealership.n.01,franchise.n.02,0
+dealership,dealership.n.01,franchise.n.02,1
 lives,live.v.01,live.v.01,1
 in,O,O,1
 Is,be.v.03,O,0
@@ -2549,7 +2547,7 @@ had,have_on.v.01,O,0
 hat,hat.n.01,hat.n.01,1
 on,O,O,1
 are,O,O,1
-certainly,certainly.r.01,surely.r.01,0
+certainly,certainly.r.01,surely.r.01,1
 homesick,homesick.a.01,homesick.a.01,1
 bought,buy.v.01,buy.v.01,1
 newspaper,newspaper.n.01,newspaper.n.03,0
@@ -2697,7 +2695,7 @@ judge,judge.n.01,judge.n.01,1
 's,O,O,1
 decision,decision.n.02,decision.n.02,1
 is,O,O,1
-final,final.a.03,final.a.01,0
+final,final.a.03,final.a.01,1
 am,O,O,1
 eighteen,O,O,1
 years,year.n.01,year.n.01,1
@@ -2713,9 +2711,9 @@ won,win.v.01,win.v.01,1
 lottery,lottery.n.02,lottery.n.01,0
 pulse,pulse.n.03,pulsation.n.01,0
 is,O,O,1
-slow,slow.a.02,slow.a.04,0
+slow,slow.a.02,slow.a.04,1
 is,be.v.08,O,0
-great,great.a.02,great.a.04,0
+great,great.a.02,great.a.04,1
 scientist,scientist.n.01,scientist.n.01,1
 is,O,O,1
 not,O,O,1
@@ -2739,7 +2737,7 @@ sick,sick.a.01,sick.a.01,1
 trees,tree.n.01,tree.n.01,1
 are,O,O,1
 green,green.a.01,green.a.01,1
-Extremely,extremely.r.01,highly.r.01,0
+Extremely,extremely.r.01,highly.r.01,1
 loud,loud.a.01,loud.a.01,1
 music,O,music.n.01,0
 interrupted,interrupt.v.03,interrupt.v.01,0
@@ -2758,7 +2756,7 @@ must,O,O,1
 promise,promise.v.01,promise.v.01,1
 something,entity.n.01,entity.n.01,1
 's,O,O,1
-cliche,cliche.n.01,platitude.n.01,0
+cliche,cliche.n.01,platitude.n.01,1
 but,O,O,1
 true,true.a.01,true.a.01,1
 emit,emit.v.02,O,0
@@ -2787,7 +2785,7 @@ to,O,O,1
 dollar,dollar.n.01,dollar.n.01,1
 is,be.v.08,O,0
 king,king.n.01,king.n.01,1
-ruled,rule.v.01,govern.v.03,0
+ruled,rule.v.01,govern.v.03,1
 over,O,O,1
 island,island.n.01,island.n.01,1
 fire,fire.v.04,fire.n.01,0
@@ -2881,7 +2879,7 @@ Bulgarian,country.n.02,bulgarian.a.01,0
 Approximately,O,O,1
 seven~billion,O,O,1
 people,person.n.01,person.n.01,1
-inhabit,inhabit.v.01,populate.v.01,0
+inhabit,inhabit.v.01,populate.v.01,1
 planet,planet.n.01,planet.n.03,0
 book,book.n.02,book.n.02,1
 costs,cost.v.01,cost.v.01,1
@@ -2954,7 +2952,7 @@ was,O,O,1
 thirteen,O,O,1
 's,be.v.01,O,0
 something,entity.n.01,entity.n.01,1
-special,special.a.03,particular.s.01,0
+special,special.a.03,particular.s.01,1
 've,O,O,1
 told,tell.v.02,tell.v.02,1
 hundred,O,O,1
@@ -2994,7 +2992,7 @@ bustling,bustle.v.01,bustle.v.01,1
 with,O,O,1
 shoppers,shopper.n.01,shopper.n.01,1
 plans,plan.n.01,plan.n.01,1
-seem,seem.v.01,look.v.02,0
+seem,seem.v.01,look.v.02,1
 much,much.r.01,O,0
 alike,alike.a.01,alike.a.01,1
 to,O,O,1
@@ -3015,7 +3013,7 @@ by,O,O,1
 old,old.a.01,old.a.01,1
 man,man.n.01,man.n.01,1
 's,O,O,1
-pitiful,pitiful.a.03,pathetic.s.02,0
+pitiful,pitiful.a.03,pathetic.s.02,1
 story,story.n.01,story.n.01,1
 burst,burst.v.02,burst.v.01,0
 into,O,O,1
@@ -3080,7 +3078,7 @@ is,O,O,1
 made,make.v.06,make.v.06,1
 of,O,O,1
 wood,wood.n.01,wood.n.01,1
-pouted,pout.v.01,sulk.v.01,0
+pouted,pout.v.01,sulk.v.01,1
 when,O,O,1
 was,O,O,1
 told,tell.v.04,tell.v.02,0
@@ -3104,7 +3102,7 @@ cloth,cloth.n.01,cloth.n.01,1
 grandfather,grandfather.n.01,grandfather.n.01,1
 suffers,suffer.v.02,suffer.v.02,1
 from,O,O,1
-hypertension,hypertension.n.01,high_blood_pressure.n.01,0
+hypertension,hypertension.n.01,high_blood_pressure.n.01,1
 driver,driver.n.01,driver.n.01,1
 overtook,overtake.v.02,overtake.v.01,0
 car,car.n.01,car.n.01,1
@@ -3207,7 +3205,7 @@ was,O,O,1
 wearing,wear.v.01,wear.v.01,1
 orange,orange.a.01,orange.n.01,0
 prison,prison.n.01,prison.n.01,1
-jumpsuit,jumpsuit.n.01,jump_suit.n.01,0
+jumpsuit,jumpsuit.n.01,jump_suit.n.01,1
 cat,cat.n.01,cat.n.01,1
 is,O,O,1
 playing,play.v.05,play.v.01,0

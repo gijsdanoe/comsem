@@ -4,17 +4,8 @@ import json
 import pandas as pd
 from nltk.corpus import wordnet as wn
 from nltk.tokenize import word_tokenize
+from nltk.stem import WordNetLemmatizer
 nltk.download('omw-1.4')
-
-
-# def skip_token(token, tag):
-#     if tag.startswith('NNP'):
-#         return True
-#     if token.isdigit():
-#         return True
-#     if tag.startswith('PRP'):
-#         return True
-#     return False
 
 
 def wordnet_pos_code(tag):
@@ -73,6 +64,8 @@ def baseline_2(sentence, lookup):
         if token in lookup:
             new_tokens[token] = lookup[token]
         else:
+            # lemmatizer = WordNetLemmatizer()
+            # lemma = lemmatizer.lemmatize(token)
             wn_pos = wordnet_pos_code(pos)
             if wn_pos:
                 synsets = wn.synsets(token, pos=wn_pos)
@@ -91,15 +84,3 @@ def baseline_2(sentence, lookup):
     return new_tokens
 
 
-# def main():
-#     token_label_count = create_temp_lookupdict_fr_trainset("Data/tokens_labels_train.json")
-#     lookup = create_lookupdict_fr_trainset(token_label_count)
-#     sentences_test_file = utils.read_file('Data/sentences_test.json')
-
-#     for sid, sent in sentences_test_file.items():
-
-#         print(baseline_2(sent, lookup))
-
-
-# if __name__ == "__main__":
-#     main()
