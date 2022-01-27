@@ -8,18 +8,6 @@ from nltk.stem import WordNetLemmatizer
 nltk.download('omw-1.4')
 
 
-def wordnet_pos_code(tag):
-    if tag.startswith('NN'):
-        return wn.NOUN
-    elif tag.startswith('VB'):
-        return wn.VERB
-    elif tag.startswith('JJ'):
-        return wn.ADJ
-    elif tag.startswith('RB'):
-        return wn.ADV
-    else:
-        return None
-
 
 def create_temp_lookupdict_fr_trainset(json_path):
     token_label_count = {}
@@ -52,7 +40,7 @@ def create_lookupdict_fr_trainset(token_label_count):
 
 
 def baseline_2(sentence, lookup):
-    new_tokens = {}
+    result_dict = {}
 
     tokens = word_tokenize(sentence)
     tokens_pos = nltk.pos_tag(tokens)
@@ -62,25 +50,23 @@ def baseline_2(sentence, lookup):
             continue
 
         if token in lookup:
-            new_tokens[token] = lookup[token]
+            result_dict[token] = lookup[token]
         else:
-            # lemmatizer = WordNetLemmatizer()
-            # lemma = lemmatizer.lemmatize(token)
-            wn_pos = wordnet_pos_code(pos)
+            wn_pos = utils.wordnet_pos_code(pos)
             if wn_pos:
                 synsets = wn.synsets(token, pos=wn_pos)
                 if synsets:
-                    new_tokens[token] = synsets[0].name()
+                    result_dict[token] = synsets[0].name()
                 else:
-                    new_tokens[token] = "O"
+                    result_dict[token] = "O"
 
             else:
                 synsets = wn.synsets(token)
                 if synsets:
-                    new_tokens[token] = synsets[0].name()
+                    result_dict[token] = synsets[0].name()
                 else:
-                    new_tokens[token] = "O"
+                    result_dict[token] = "O"
 
-    return new_tokens
+    return result_dict
 
 

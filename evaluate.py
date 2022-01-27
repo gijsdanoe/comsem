@@ -76,27 +76,47 @@ def evaluate(test_gold_filepath, result_filepath, filename):
 
 
 def main():
-    # Evaluate baseline on test set.
+    # # Evaluate baseline on test set.
+    # test_gold_filepath = "Output/tokens_labels_test_filtered_for_eval.csv"
+    # output_filepath = "Output/output_baseline_on_testset.csv"
+    # filename = "result_baseline_on_testset"
+    # print("Accuracy baseline on testset:")
+    # print(evaluate(test_gold_filepath, output_filepath, filename))
+
+    # # Evaluate baseline on dev set.
+    # dev_gold_filepath = "Output/tokens_labels_dev_filtered_for_eval.csv"
+    # output_filepath = "Output/output_baseline_on_devset.csv"
+    # filename = "result_baseline_on_devset"
+    # print("Accuracy baseline on devset:")
+    # print(evaluate(dev_gold_filepath, output_filepath, filename))
+
+    # # Evaluate baseline on eval set.
+    # eval_gold_filepath = "Output/tokens_labels_eval_filtered_for_eval.csv"
+    # output_filepath = "Output/output_baseline_on_evalset.csv"
+    # filename = "result_baseline_on_evalset"
+    # print("Accuracy baseline on evalset:")
+    # print(evaluate(eval_gold_filepath, output_filepath, filename))
+
+    # Evaluate system on test set.
     test_gold_filepath = "Output/tokens_labels_test_filtered_for_eval.csv"
-    output_filepath = "Output/output_baseline_on_testset.csv"
-    filename = "result_baseline_on_testset"
-    print("Accuracy baseline on testset:")
+    output_filepath = "Output/output_sys2_on_testset.csv"
+    filename = "result_sys2_on_testset"
+    print("Accuracy system on testset:")
     print(evaluate(test_gold_filepath, output_filepath, filename))
 
-    # Evaluate baseline on dev set.
+    # Evaluate system on dev set.
     dev_gold_filepath = "Output/tokens_labels_dev_filtered_for_eval.csv"
-    output_filepath = "Output/output_baseline_on_devset.csv"
-    filename = "result_baseline_on_devset"
-    print("Accuracy baseline on devset:")
+    output_filepath = "Output/output_sys2_on_devset.csv"
+    filename = "result_sys2_on_devset"
+    print("Accuracy system on devset:")
     print(evaluate(dev_gold_filepath, output_filepath, filename))
 
-    # Evaluate baseline on eval set.
+    # Evaluate system on eval set.
     eval_gold_filepath = "Output/tokens_labels_eval_filtered_for_eval.csv"
-    output_filepath = "Output/output_baseline_on_evalset.csv"
-    filename = "result_baseline_on_evalset"
-    print("Accuracy baseline on evalset:")
+    output_filepath = "Output/output_sys2_on_evalset.csv"
+    filename = "result_sys2_on_evalset"
+    print("Accuracy system on evalset:")
     print(evaluate(eval_gold_filepath, output_filepath, filename))
-
 
 
 

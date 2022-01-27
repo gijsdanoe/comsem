@@ -1,4 +1,4 @@
-I/ Baseline_2:
+I/ Baseline:
 
 1. skip token:
 
@@ -68,21 +68,5 @@ return loopkup_dict
 - count the 1's and divide the count to total of tokens/labels.
 
 
-II/ System:
-
-- input an target sentence
-- tokenize the target sentence
-- get pos tag of tokens
-- sentences [] (including target sentences and all glosses/examples)
-- sentences.append(target_sentence)
-- result_dict {}
-- for each token in sentence:
-	- check skip token
-	- check if token is searchable in WN
-		- no: get "O"
-		- yes:
-			+ get synsets with its pos tag
-			+ get definition of each synset
-			+ each definition appends to sentences[]
 
 

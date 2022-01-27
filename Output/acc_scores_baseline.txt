@@ -7,6 +7,7 @@ Accuracy baseline on devset:
 Accuracy baseline on evalset:
 78.57
 
+
 After checking predict and gold label are the same:
 
 Accuracy baseline on testset: 81.23
@@ -16,3 +17,6 @@ Accuracy baseline on devset: 80.58
 Accuracy baseline on evalset: 80.71
 
 
+sys on test: 66.91
+sys on dev 66.77
+sys on eval 67.06

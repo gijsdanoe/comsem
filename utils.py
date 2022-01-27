@@ -1,6 +1,14 @@
 import json
 import pandas as pd
 import string
+import nltk
+
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+from nltk.corpus import wordnet as wn
+from nltk.tokenize import word_tokenize
+nltk.download('omw-1.4')
+
 
 OUTPUT_DIR = 'Output/'
 
@@ -115,3 +123,48 @@ def write_to_csv(c1, c2, filename):
     df['Token'] = c1
     df['Predict'] = c2
     df.to_csv(OUTPUT_DIR + filename + ".csv", index=False, header=False)
+
+
+def wordnet_pos_code(tag):
+    if tag.startswith('NN'):
+        return wn.NOUN
+    elif tag.startswith('VB'):
+        return wn.VERB
+    elif tag.startswith('JJ'):
+        return wn.ADJ
+    elif tag.startswith('RB'):
+        return wn.ADV
+    else:
+        return None
+
+
+def base_similarity_check(sentences):
+
+    model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+
+    #Encoding:
+    sentence_embeddings = model.encode(sentences)
+
+    #Calculate cosine similarity for sentence 0:
+    similarities = cosine_similarity(
+    [sentence_embeddings[0]],
+    sentence_embeddings[1:]
+    )
+
+    return similarities.tolist()[0]
+
+
+def mini_similarity_check(sentences):
+
+    model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+
+    #Encoding:
+    sentence_embeddings = model.encode(sentences)
+
+    #Calculate cosine similarity for sentence 0:
+    similarities = cosine_similarity(
+    [sentence_embeddings[0]],
+    sentence_embeddings[1:]
+    )
+
+    return similarities.tolist()[0]
