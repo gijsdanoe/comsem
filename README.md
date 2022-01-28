@@ -5,6 +5,6 @@
 
 # Evaluation
 ### To perform evaluation you first need to run create_files.py to read the raw dataset (train.txt, test.txt, dev.txt or eval.txt )
-### After runing this script you will get 2 json files: 1) tokens_test.json 2) sentence_test.json (if test.txt was chosen as dataset)
-### Next run sim_checkers.py and give that dataset that you used as argument for the argparser (-d). This script will produce an results_test.json containing the wordsense labels produced by our system.
+### After runing this script you will get 2 json files: 1) tokens_eval.json 2) sentence_eval.json (if eval.txt was chosen as dataset)
+### Next run sim_checkers.py and give that dataset that you used as argument for the argparser (-d). This script will produce an results_eval.json (is already in Output folder) containing the wordsense labels produced by our system.
 ### To check accuracy run test_system.py and give that dataset that you used as argument for the argparser (-d).
