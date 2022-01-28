@@ -11,6 +11,17 @@ sp = spacy.load('en_core_web_sm')
 from nltk.corpus.reader.wordnet import WordNetError
 import csv
 import re
+import argparse
+
+
+
+def create_arg_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-d", "--dataset", default='test', type=str, help="Dataset for testing system")
+    parser.add_argument("-g", "--gloss", action="store_true", help="Use gloss only rules")
+    args = parser.parse_args()
+    
+    return args
 
 def match(gold, system):
     """
@@ -68,14 +79,17 @@ def filter_tokens(tokens, gold, results):
     return new_tokens, new_sense
 
 def main():
-    tokens,gold, base, label = utils.read_data2("Output/result_baseline_on_devset.csv")
-    print(len(tokens))
-    results = utils.read_file("Output/results_dev_POS_mix.json")
+    args = create_arg_parser()
+    tokens,gold, base, label = utils.read_data2(f"Output/result_baseline_on_{args.dataset}set.csv")
+    if args.gloss:
+        results = utils.read_file(f"Output/results_{args.dataset}.json")
+    else:
+        results = utils.read_file(f"Output/results_{args.dataset}_mix.json")
     new_tokens, new_sense = filter_tokens(tokens,gold,results)
     new_labels = match(gold, new_sense)
     print(len(new_tokens))
     print(get_accuracy(new_labels))
-    with open('Output/system_dev_mix.csv', 'w') as f:
+    with open('Output/system_{args.dataset}.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerows(zip(new_tokens, gold,base,new_sense,new_labels))
 
