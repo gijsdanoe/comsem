@@ -141,3 +141,33 @@ def wordnet_pos_code(tag):
     else:
         return None
 
+ef write2Json(doc_dict, path):
+    with open(path, 'w') as fp:
+        json.dump(doc_dict, fp)
+
+def read_data2(file):
+    """Read baseline data"""
+    base = []
+    gold = []
+    token = []
+    labels = []
+    with open(file, encoding='utf-8') as f:
+        for line in f:
+            tokens = line.strip().split("\t")
+            token.append(tokens[0])
+            gold.append(tokens[1])
+            base.append(tokens[2])
+            labels.append(tokens[3])
+    return token, gold, base, labels
+
+
+def read_data_from_user(file):
+    """User data"""
+    ids = []
+    sentences = []
+    with open(file, encoding='utf-8') as f:
+        for line in f:
+            tokens = line.strip().split("\t")
+            ids.append(tokens[0])
+            sentences.append(tokens[1])
+    return ids, sentences
