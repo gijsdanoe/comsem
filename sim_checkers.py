@@ -8,6 +8,10 @@ import nltk
 
 def base_similarity_check(sentences):
 
+    '''Calculate the consine-similarity of Bert embeddings
+       of sentences using BERT sentencetransforms base.
+       Return a list of scores of sentences'''
+
     model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
 
     #Encoding:
@@ -23,6 +27,9 @@ def base_similarity_check(sentences):
 
 
 def mini_similarity_check(sentences):
+    '''Calculate the consine-similarity of Bert embeddings
+       of sentences using BERT sentencetransforms mini.
+       Return a list of scores of sentences'''
 
     model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 

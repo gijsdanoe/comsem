@@ -15,8 +15,16 @@ Accuracy baseline on testset: 81.23
 Accuracy baseline on devset: 80.58
 
 Accuracy baseline on evalset: 80.71
+Avg: 80.84
 
-
+sys only gloss
 sys on test: 66.91
 sys on dev 66.77
 sys on eval 67.06
+Avg: 66.91
+
+sys mix
+on test: 63.34
+on dev: 64.02
+on eval: 63.90
+Avg: 63.75

@@ -17,6 +17,8 @@ OUTPUT_DIR = 'Output/'
 
 
 def write_result_to_csv(c1, c2, c3, c4, filename):
+    '''Write the tokens, gold label, output label,
+       and matches of labels in a csv file'''
     df = pd.DataFrame()
     df['Token'] = c1
     df['Labels gold'] = c2
@@ -26,6 +28,8 @@ def write_result_to_csv(c1, c2, c3, c4, filename):
 
 
 def evaluate(test_gold_filepath, result_filepath, filename):
+    '''Tokens, gold labels, output labels, and matches of labels
+      (0 or 1) are saved in a csv file'''
 
     tokens = []
     labels_gold = []
@@ -68,7 +72,7 @@ def evaluate(test_gold_filepath, result_filepath, filename):
             matches.append("0")
 
 
-    print(len(tokens), len(labels_gold), len(labels_baseline), len(matches))
+    # print(len(tokens), len(labels_gold), len(labels_baseline), len(matches))
     write_result_to_csv(tokens, labels_gold, labels_baseline, matches, filename)
 
     print(round(count_match / len(labels_gold) * 100, 2))
@@ -76,48 +80,26 @@ def evaluate(test_gold_filepath, result_filepath, filename):
 
 
 def main():
-    # # Evaluate baseline on test set.
-    # test_gold_filepath = "Output/tokens_labels_test_filtered_for_eval.csv"
-    # output_filepath = "Output/output_baseline_on_testset.csv"
-    # filename = "result_baseline_on_testset"
-    # print("Accuracy baseline on testset:")
-    # print(evaluate(test_gold_filepath, output_filepath, filename))
-
-    # # Evaluate baseline on dev set.
-    # dev_gold_filepath = "Output/tokens_labels_dev_filtered_for_eval.csv"
-    # output_filepath = "Output/output_baseline_on_devset.csv"
-    # filename = "result_baseline_on_devset"
-    # print("Accuracy baseline on devset:")
-    # print(evaluate(dev_gold_filepath, output_filepath, filename))
-
-    # # Evaluate baseline on eval set.
-    # eval_gold_filepath = "Output/tokens_labels_eval_filtered_for_eval.csv"
-    # output_filepath = "Output/output_baseline_on_evalset.csv"
-    # filename = "result_baseline_on_evalset"
-    # print("Accuracy baseline on evalset:")
-    # print(evaluate(eval_gold_filepath, output_filepath, filename))
-
-    # Evaluate system on test set.
+    # Evaluate baseline on test set.
     test_gold_filepath = "Output/tokens_labels_test_filtered_for_eval.csv"
-    output_filepath = "Output/output_sys2_on_testset.csv"
-    filename = "result_sys2_on_testset"
-    print("Accuracy system on testset:")
+    output_filepath = "Output/output_baseline_on_testset.csv"
+    filename = "result_baseline_on_testset"
+    print("Accuracy baseline on testset:")
     print(evaluate(test_gold_filepath, output_filepath, filename))
 
-    # Evaluate system on dev set.
+    # Evaluate baseline on dev set.
     dev_gold_filepath = "Output/tokens_labels_dev_filtered_for_eval.csv"
-    output_filepath = "Output/output_sys2_on_devset.csv"
-    filename = "result_sys2_on_devset"
-    print("Accuracy system on devset:")
+    output_filepath = "Output/output_baseline_on_devset.csv"
+    filename = "result_baseline_on_devset"
+    print("Accuracy baseline on devset:")
     print(evaluate(dev_gold_filepath, output_filepath, filename))
 
-    # Evaluate system on eval set.
+    # Evaluate baseline on eval set.
     eval_gold_filepath = "Output/tokens_labels_eval_filtered_for_eval.csv"
-    output_filepath = "Output/output_sys2_on_evalset.csv"
-    filename = "result_sys2_on_evalset"
-    print("Accuracy system on evalset:")
+    output_filepath = "Output/output_baseline_on_evalset.csv"
+    filename = "result_baseline_on_evalset"
+    print("Accuracy baseline on evalset:")
     print(evaluate(eval_gold_filepath, output_filepath, filename))
-
 
 
 if __name__ == "__main__":

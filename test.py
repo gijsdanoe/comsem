@@ -13,6 +13,10 @@ import baseline_2
 
 def test_baseline(json_path, filename):
 
+    '''Use baseline system to produce label of each token
+       of the input sentences. The output tokens and labels
+       are saved in a csv file'''
+
     token_label_count = baseline_2.create_temp_lookupdict_fr_trainset(
         "Data/tokens_labels_train.json")
     lookup = baseline_2.create_lookupdict_fr_trainset(token_label_count)

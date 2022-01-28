@@ -77,6 +77,8 @@ def write2Json(doc_dict, path):
 
 
 def skip_token(token, tag):
+    '''Return a boolean value if the input token
+       meets these condition or not.'''
     if tag.startswith('NNP'):
         return True
     if tag.startswith('PRP'):
@@ -119,6 +121,7 @@ def skip_token(token, tag):
 
 
 def write_to_csv(c1, c2, filename):
+    '''Write 2 lists to a csv file without headers for columns'''
     df = pd.DataFrame()
     df['Token'] = c1
     df['Predict'] = c2
@@ -126,6 +129,7 @@ def write_to_csv(c1, c2, filename):
 
 
 def wordnet_pos_code(tag):
+    '''Convert pos tag to wordnet pos code'''
     if tag.startswith('NN'):
         return wn.NOUN
     elif tag.startswith('VB'):
@@ -137,34 +141,3 @@ def wordnet_pos_code(tag):
     else:
         return None
 
-
-def base_similarity_check(sentences):
-
-    model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
-
-    #Encoding:
-    sentence_embeddings = model.encode(sentences)
-
-    #Calculate cosine similarity for sentence 0:
-    similarities = cosine_similarity(
-    [sentence_embeddings[0]],
-    sentence_embeddings[1:]
-    )
-
-    return similarities.tolist()[0]
-
-
-def mini_similarity_check(sentences):
-
-    model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-
-    #Encoding:
-    sentence_embeddings = model.encode(sentences)
-
-    #Calculate cosine similarity for sentence 0:
-    similarities = cosine_similarity(
-    [sentence_embeddings[0]],
-    sentence_embeddings[1:]
-    )
-
-    return similarities.tolist()[0]

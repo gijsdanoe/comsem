@@ -34,6 +34,7 @@ def main():
     write2Json(doc_dict, 'Data/tokens_labels_train.json')
     write2Json(getSenseBasline(doc_dict),'Data/tokens.json')
     write2Json({Ids[i]: sentence[i] for i in range(len(Ids))}, 'Data/sentences.json')
+    # print("train set (sentences):", len(Ids)) # 7668
 
 
     Ids_test, sentence_test, doc_dict_test = utils.read_data("Data/test.txt")
@@ -42,8 +43,8 @@ def main():
     write2Json(doc_dict_test, 'Data/tokens_labels_test.json')
     write2Json(getSenseBasline(doc_dict_test),'Data/tokens_test.json')
     write2Json({Ids_test[i]: sentence_test[i] for i in range(len(Ids_test))}, 'Data/sentences_test.json')
-    # print("length of train set:", len(Ids)) # 7668
-    # print("length of test set:", len(Ids_test)) # 1048
+
+    # print("test set (sentences):", len(Ids_test)) # 1048
 
 
     Ids_dev, sentence_dev, doc_dict_dev = utils.read_data("Data/dev.txt")
@@ -51,14 +52,14 @@ def main():
     # save them to a json file
     write2Json(doc_dict_dev, 'Data/tokens_labels_dev.json')
     write2Json({Ids_dev[i]: sentence_dev[i] for i in range(len(Ids_dev))}, 'Data/sentences_dev.json')
-
+    # print("dev set (sentences):", len(Ids_dev)) # 1169
 
     Ids_eval, sentence_eval, doc_dict_eval = utils.read_data("Data/eval.txt")
     # get tokens and their labels from evalset file and
     # save them to a json file
     write2Json(doc_dict_eval, 'Data/tokens_labels_eval.json')
     write2Json({Ids_eval[i]: sentence_eval[i] for i in range(len(Ids_eval))}, 'Data/sentences_eval.json')
-
+    # print("dev set (sentences):", len(Ids_eval)) # 830
 
 if __name__ == "__main__":
     main()

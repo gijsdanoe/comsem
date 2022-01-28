@@ -10,6 +10,11 @@ nltk.download('omw-1.4')
 
 
 def create_temp_lookupdict_fr_trainset(json_path):
+    '''Collect all the labels of a token, and the
+       count of its labels. Return a dictionary
+       with key is token, value is a dictionary
+       with key is the label, and value is its count. '''
+
     token_label_count = {}
     sid_tokens_labels = utils.read_file(json_path)
 
@@ -33,6 +38,10 @@ def create_temp_lookupdict_fr_trainset(json_path):
 
 
 def create_lookupdict_fr_trainset(token_label_count):
+    '''Take the max count of the label of a token.
+       Return a dictionary with key is token, and
+       value is its most frequent label.'''
+
     return {
         token: max(label_count.items(), key=lambda v: v[1])[0]
         for token, label_count in token_label_count.items()
@@ -40,6 +49,11 @@ def create_lookupdict_fr_trainset(token_label_count):
 
 
 def baseline_2(sentence, lookup):
+    '''Filter skipped token, use the lookup
+       dictionary to label tokens in the input
+       sentence. Return a dictionary with key
+       is token, value is its label.'''
+
     result_dict = {}
 
     tokens = word_tokenize(sentence)
