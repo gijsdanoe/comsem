@@ -27,33 +27,12 @@ def create_arg_parser():
     
     return args
 
-def base_similarity_check(sentences, model=None):
+def base_similarity_check(sentences, model):
     """
      Calculate the similarity between the first item in 'sentences' and the rest using embeddings from 'model'
      
      Returns a list of cosine_similarities
     """
-    if model is None:
-        model = model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
-    #Encoding:
-    sentence_embeddings = model.encode(sentences)
-
-    #Calculate cosine similarity for sentence 0:
-    similarities = cosine_similarity(
-    [sentence_embeddings[0]],
-    sentence_embeddings[1:]
-    )
-
-    return similarities.tolist()[0]
-
-
-def mini_similarity_check(sentences):
-    '''Calculate the consine-similarity of Bert embeddings
-       of sentences using BERT sentencetransforms mini.
-       Return a list of scores of sentences'''
-
-    model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-
     #Encoding:
     sentence_embeddings = model.encode(sentences)
 
