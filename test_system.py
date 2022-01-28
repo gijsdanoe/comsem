@@ -50,6 +50,9 @@ def get_accuracy(labels):
     return accuracy*100
 
 def filter_tokens(tokens, gold, results):
+    """
+    Filterout tokens that are not present in baseline
+    """
     new_tokens = []
     new_sense = []
     cont = True
@@ -65,14 +68,14 @@ def filter_tokens(tokens, gold, results):
     return new_tokens, new_sense
 
 def main():
-    tokens,gold, base, label = utils.read_data2("Data/baseline_dev.txt")
+    tokens,gold, base, label = utils.read_data2("Output/result_baseline_on_devset.csv")
     print(len(tokens))
-    results = utils.read_file("Data/results_dev_POS_mix.json")
+    results = utils.read_file("Output/results_dev_POS_mix.json")
     new_tokens, new_sense = filter_tokens(tokens,gold,results)
     new_labels = match(gold, new_sense)
     print(len(new_tokens))
     print(get_accuracy(new_labels))
-    with open('system_dev_mix.csv', 'w') as f:
+    with open('Output/system_dev_mix.csv', 'w') as f:
         writer = csv.writer(f)
         writer.writerows(zip(new_tokens, gold,base,new_sense,new_labels))
 
